@@ -11,7 +11,7 @@
   },
   "action": {
     "default_title": "Yelow Shopping",
-    "default_popup": "popup.html"
+    "default_popup": "index.html"
   },
   "permissions": [
     "storage"
