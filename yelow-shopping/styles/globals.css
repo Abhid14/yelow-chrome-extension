@@ -8,3 +8,12 @@ body {
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
   font-family: 'Noto Sans', sans-serif;
 }
+.rItems{
+  width: 100%;
+}
+.chakra-slide{
+  height: 575px;
+  max-width: 205px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
