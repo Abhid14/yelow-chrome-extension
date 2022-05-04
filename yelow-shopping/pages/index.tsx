@@ -33,14 +33,13 @@ export default function HomePage() {
   const btnRef = React.useRef();
   return (
     <Box
-      h={575}
-      w={410}
-      border={"1px"}
+      //h={575}
+      //w={410}
+      className="extBox"
       //bg={useColorModeValue('blue.100', 'gray.900')}
       //color={useColorModeValue('gray.700', 'gray.200')}
     >
       <Drawer
-        h={575}
         placement={placement}
         size={"x"}
         onClose={onClose}
@@ -48,35 +47,67 @@ export default function HomePage() {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <Flex
-            h={"575"}
-            w={"69px"}
-            justifyContent={"space-between"}
-            flexDirection={"column"}
-          >
-            <Flex mt={5} gap={9} flexDirection={"column"} alignItems={"center"}>
-              <Icon
-                ref={btnRef}
-                onClick={onOpen}
-                height={22}
-                icon="charm:menu-hamburger"
-              />
-              <Icon height={22} icon="akar-icons:cart" />
-              <Icon height={22} icon="lucide:package-search" />
-              <Icon height={22} icon="akar-icons:heart" />
+          <Flex flexDirection={"row"}>
+            <Flex
+              className="lBox"
+              justifyContent={"space-between"}
+              flexDirection={"column"}
+            >
+              <Flex
+                mt={5}
+                gap={9}
+                flexDirection={"column"}
+                alignItems={"center"}
+              >
+                <Icon
+                  ref={btnRef}
+                  onClick={onOpen}
+                  height={22}
+                  icon="charm:menu-hamburger"
+                />
+                <Icon height={22} icon="akar-icons:cart" />
+                <Icon height={22} icon="lucide:package-search" />
+                <Icon height={22} icon="akar-icons:heart" />
+              </Flex>
+              <Flex
+                mb={5}
+                gap={9}
+                flexDirection={"column"}
+                alignItems={"center"}
+              >
+                <Icon height={22} icon="bi:person" />
+                <Icon height={22} icon="ic:round-logout" />
+              </Flex>
             </Flex>
-            <Flex mb={5} gap={9} flexDirection={"column"} alignItems={"center"}>
-              <Icon height={22} icon="bi:person" />
-              <Icon height={22} icon="ic:round-logout" />
+            <Flex ml={4} mt={"76px"} justifyContent={"space-between"} flexDirection={"column"}>
+                <Flex gap={8} flexDirection={"column"}>
+                    <Text fontSize={17}>
+                      My Orders
+                    </Text>
+                    <Text fontSize={17}>
+                      Track Order
+                    </Text>
+                    <Text fontSize={17}>
+                      Wishlist
+                    </Text>
+                </Flex>
+                <Flex mb={"18px"} gap={8} flexDirection={"column"}>
+                    <Text fontSize={17}>
+                      Profile
+                    </Text>
+                    <Text fontSize={17}>
+                      Log Out
+                    </Text>
+                </Flex>
             </Flex>
           </Flex>
         </DrawerContent>
       </Drawer>
+
       <Flex flexDirection={"row"}>
         <Flex
-          h={"575"}
-          w={"69px"}
-          border={"1px"}
+          className="lBox"
+          boxShadow="2xl"
           justifyContent={"space-between"}
           flexDirection={"column"}
         >
@@ -96,7 +127,7 @@ export default function HomePage() {
             <Icon height={22} icon="ic:round-logout" />
           </Flex>
         </Flex>
-        <Flex w={"full"} mt={"22.5px"} ml={4} mr={7} flexDirection={"column"}>
+        <Flex className="rBox" mt={"22.5px"} flexDirection={"column"}>
           <Flex
             className="rItems"
             alignItems={"center"}
